@@ -385,7 +385,7 @@ section {
 
 
 .newsletter {
-  background: url(/img/principal.jpg) no-repeat;
+  background: url('../img/principal.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
