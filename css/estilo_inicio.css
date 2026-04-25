@@ -14,8 +14,11 @@
   --error-color: #f31448;
 
   --container-color1: white;
+  --fa: #001aff;
+  --ins: #cb00dd;
+  --tik: #000000;
+  --wa: #09c709;
 }
-
 
 ::-webkit-scrollbar {
   height: 4px;
@@ -30,7 +33,6 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
   background-color: var(--primary-color);
 }
-
 
 * {
   padding: 0;
@@ -59,7 +61,6 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .icons-container .icons i {
@@ -67,30 +68,29 @@ section {
   font-size: 3rem;
   color: var(--primary-color);
   /* box-shadow: rgba(46, 133, 240, 0.4) 5px 5px, rgba(46, 166, 240, 0.3) 10px 10px, rgba(46, 133, 240, 0.2) 15px 15px, rgba(46, 146, 240, 0.1) 20px 20px, rgba(46, 140, 240, 0.05) 25px 25px; */
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
-    0px 8px 13px rgba(0, 0, 0, 0.1),
-    0px 18px 23px rgba(0, 0, 0, 0.1);
+  text-shadow:
+    0px 4px 3px rgba(0, 0, 0, 0.4);
 }
 
 .icons-container .icons h3 {
   font-size: 1.5rem;
   color: var(--text-color);
   text-align: center;
-
+  font-weight: bold
 }
 
 .masked-text {
   font-size: 8rem;
   font-weight: bold;
   color: transparent;
-  background-image: url('https://img1.wallspic.com/crops/5/1/9/3/6/163915/163915-el_arte_abstracto-color-azure-pintura-morado-3840x2160.jpg');
+  background-image: url("../img/gradientletra1.jpg");
   background-size: 200%;
   /* Enlarged for smooth animation */
   background-position: 0 50%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animate-background 5s infinite alternate linear;
+  animation: animate-background 10s infinite alternate linear;
 }
 
 @keyframes animate-background {
@@ -103,15 +103,11 @@ section {
   }
 }
 
-
 .heading {
   text-align: center;
   margin-bottom: 0.8rem;
   position: relative;
 }
-
-
-
 
 .heading::before {
   content: "";
@@ -123,9 +119,7 @@ section {
   height: 1px;
   background: var(--text-color);
   z-index: 1;
-
 }
-
 
 .heading span {
   position: relative;
@@ -137,7 +131,6 @@ section {
   z-index: 99 !important;
 }
 
-
 /* SWIPER */
 #tenisProductos {
   position: relative;
@@ -148,7 +141,6 @@ section {
   width: 100% !important;
   padding: 0.6rem 0.4rem 2.2rem 0.4rem;
 }
-
 
 .swiper-slide {
   position: relative !important;
@@ -168,10 +160,12 @@ section {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: linear-gradient(35deg,
-      var(--container-color1) 60%,
-      var(--primary-color) 60%,
-      rgb(0, 0, 0) 110%);
+  background: linear-gradient(
+    35deg,
+    var(--container-color1) 60%,
+    var(--primary-color) 60%,
+    rgb(0, 0, 0) 110%
+  );
 
   border-radius: 10px;
   padding: 25px;
@@ -194,21 +188,23 @@ section {
   content: "";
   position: absolute;
 
-  background: linear-gradient(40deg,
-      #000000,
-      var(--primary-color),
-      #000000,
-      #ffffff,
-      var(--primary-color),
-      #000000,
-      #ffffff,
-      var(--primary-color),
-      #000000);
+  background: linear-gradient(
+    40deg,
+    #000000,
+    var(--primary-color),
+    #000000,
+    #ffffff,
+    var(--primary-color),
+    #000000,
+    #ffffff,
+    var(--primary-color),
+    #000000
+  );
   background-size: 300%;
   width: calc(100% + 12px);
   height: calc(100% + 12px);
   z-index: -1 !important;
-  animation: BGgradient2 20s ease infinite;
+  /* animation: BGgradient2 24s ease-in infinite; */
   border-radius: 10px;
 }
 
@@ -245,7 +241,9 @@ section {
   border-radius: 50%;
   background: var(--container-color1);
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.629), 0 1px 2px rgba(0, 0, 0, 0.415);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.629),
+    0 1px 2px rgba(0, 0, 0, 0.415);
   object-fit: contain;
 }
 
@@ -268,7 +266,7 @@ section {
   text-shadow: var(--text-shadow);
 }
 
-.card-slider .box .icons span:last-child{
+.card-slider .box .icons span:last-child {
   font-weight: bold;
 }
 .card-slider .box .content {
@@ -282,14 +280,14 @@ section {
   /* z-index: 999999; */
 }
 
-.card-slider .box .content .descripcionProducto{
+.card-slider .box .content .descripcionProducto {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.card-slider .box .content  .descripcionProducto h2 {
+.card-slider .box .content .descripcionProducto h2 {
   padding: 6px 0;
   border-top: 1px solid var(--gray-color);
   border-bottom: 1px solid var(--gray-color);
@@ -299,7 +297,7 @@ section {
   font-weight: bold;
   text-shadow: var(--text-shadow);
 }
-.card-slider .box .content .descripcionProducto h4{
+.card-slider .box .content .descripcionProducto h4 {
   color: var(--text-color);
   font-weight: 300;
 }
@@ -312,17 +310,17 @@ section {
 }
 
 .btncard .btncuatro {
-  background-image: linear-gradient(120deg,
-      rgb(0, 0, 0) 5%,
-      var(--primary-color) 58%,
-      rgb(0, 0, 0) 72%);
+  background-image: linear-gradient(
+    120deg,
+    rgb(0, 0, 0) 5%,
+    var(--primary-color) 58%,
+    rgb(0, 0, 0) 72%
+  );
 }
 
-.btncard img{
-  width:1.2rem;
- 
+.btncard img {
+  width: 1.2rem;
 }
-
 
 .btncard .btncuatro {
   width: 100%;
@@ -377,18 +375,16 @@ section {
 
 /* FIN SWIPER */
 
-
 #search-btn {
   display: none;
 }
 
-
-
 .newsletter {
-  background: url(/img/principal.jpg) no-repeat;
-  background-size: cover;
+  background: url("../img/zapatoPrincipal.jpg") no-repeat;
+  background-size: auto;
   background-position: center;
   background-attachment: fixed;
+  height: 70%;
 }
 
 .newsletter form {
@@ -422,4 +418,57 @@ section {
 
 .newsletter form input {
   border: none;
+}
+
+/* FOOTER PAGINA PRINCIPAl */
+
+.containerFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 3%;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.containerFooter .containerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.containerFooter i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.containerFooter .btnredeswa {
+  background-color: var(--wa);
+  box-shadow: 0px 1px 10px 1px var(--wa);
+}
+
+.containerFooter .btnredesfa {
+  background-color: var(--fa);
+  box-shadow: 0px 1px 10px 1px var(--fa);
+}
+
+.containerFooter .btnredesins {
+  background-color: var(--ins);
+  box-shadow: 0px 1px 10px 1px var(--ins);
+}
+.containerFooter .btnredestik {
+  background-color: var(--tik);
+  box-shadow: 0px 1px 10px 1px var(--tik);
+}
+
+.containerFooter .versionfooter span {
+  font-size: 1rem;
+  font-weight: 500;
 }
