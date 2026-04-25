@@ -380,8 +380,8 @@ section {
 }
 
 .newsletter {
-  background: url("../img/zapatoPrincipal.jpg") no-repeat;
-  background-size: auto;
+  background: url(/img/principal.jpg) no-repeat;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 70%;
@@ -418,57 +418,4 @@ section {
 
 .newsletter form input {
   border: none;
-}
-
-/* FOOTER PAGINA PRINCIPAl */
-
-.containerFooter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 55px 3%;
-  gap: 1rem;
-  padding-bottom: 1rem;
-}
-.containerFooter .containerIcons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.containerFooter i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 0.6rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.containerFooter .btnredeswa {
-  background-color: var(--wa);
-  box-shadow: 0px 1px 10px 1px var(--wa);
-}
-
-.containerFooter .btnredesfa {
-  background-color: var(--fa);
-  box-shadow: 0px 1px 10px 1px var(--fa);
-}
-
-.containerFooter .btnredesins {
-  background-color: var(--ins);
-  box-shadow: 0px 1px 10px 1px var(--ins);
-}
-.containerFooter .btnredestik {
-  background-color: var(--tik);
-  box-shadow: 0px 1px 10px 1px var(--tik);
-}
-
-.containerFooter .versionfooter span {
-  font-size: 1rem;
-  font-weight: 500;
 }
