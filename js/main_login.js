@@ -242,7 +242,7 @@ class NeumorphismLoginForm {
         setTimeout(() => {
             console.log('Redirecting to dashboard...');
             // INICIO LUIS
-            window.location.href = "/templates/home.html";
+            window.location.href = "templates/home.html";
         }, 3500);
     }
 }
