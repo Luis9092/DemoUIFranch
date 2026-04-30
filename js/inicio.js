@@ -1,5 +1,5 @@
 var swiper = new Swiper(".card-slider", {
-   spaceBetween: 36,
+   spaceBetween: 50,
         loop: true,
         pagination: true,
         centeredSlides: false,
@@ -32,7 +32,7 @@ var swiper = new Swiper(".card-slider", {
                 slidesPerView: 3, // 4 slides en pantallas grandes
             },
             1200: {
-                slidesPerView: 3, // 5 slides en pantallas extra grandes
+                slidesPerView: 4, // 5 slides en pantallas extra grandes
             },
         },
 });

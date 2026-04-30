@@ -9,10 +9,10 @@
   --border-hover: 0.1rem solid var(--text-color);
   --border-color: #d2d2d2;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  --primary-color: #0061b1;
+  --primary-color: #b10026;
   --icon-color: #00ffb7;
   --error-color: #f31448;
-
+  --container-color: #f5fbff;
   --container-color1: white;
   --fa: #001aff;
   --ins: #cb00dd;
@@ -66,42 +66,32 @@ section {
 
 .icons-container .icons i {
   text-align: center;
-  font-size: 3rem;
-  color: var(--primary-color);
+  font-size: 1.8rem;
+  color: var(--text-color);
   /* box-shadow: rgba(46, 133, 240, 0.4) 5px 5px, rgba(46, 166, 240, 0.3) 10px 10px, rgba(46, 133, 240, 0.2) 15px 15px, rgba(46, 146, 240, 0.1) 20px 20px, rgba(46, 140, 240, 0.05) 25px 25px; */
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4);
+  padding: 0.4rem;
 }
 
 .icons-container .icons h3 {
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: var(--primary-color);
   text-align: center;
   font-weight: bold;
 }
 
-.masked-text {
+/* .masked-text {
   font-size: 8rem;
   font-weight: bold;
   color: transparent;
-  background-image: url("../img/gradientletra1.jpg");
-  background-size: 200%;
-  /* Enlarged for smooth animation */
-  background-position: 0 50%;
-  background-clip: text;
+
+  background: linear-gradient(
+    90deg var(--primary-color) 90%,
+    var(--text-color) 99%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animate-background 10s infinite alternate linear;
-}
-
-@keyframes animate-background {
-  0% {
-    background-position: 0 50%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
-}
+} */
 
 .heading {
   text-align: center;
@@ -141,7 +131,7 @@ section {
 .swiper {
   position: relative !important;
   width: 100% !important;
-  padding: 1rem 1.4rem 2.2rem 1.4rem;
+  padding: 1rem 2.2rem 2.2rem 2.2rem;
 }
 
 .swiper-slide {
@@ -170,11 +160,9 @@ section {
   );
 
   border-radius: 10px;
-  padding:25px;
-
+  padding: 25px;
 }
 
- 
 .animacion-card {
   position: relative;
 }
@@ -194,7 +182,6 @@ section {
     #000000,
     #ffffff,
     var(--primary-color)
-  
   );
   background-size: 300%;
   width: calc(100% + 12px);
@@ -203,7 +190,6 @@ section {
   /* animation: BGgradient2 24s ease-in infinite; */
   border-radius: 10px;
   box-shadow: var(--neon-box-shadow);
-
 }
 
 .card-slider .box:after {
@@ -383,10 +369,10 @@ section {
 }
 
 .newsletter form {
-  max-width: 20rem;
+  max-width: 16rem;
   margin-left: auto;
   text-align: center;
-  padding: 2.2rem 1rem;
+  padding: 1.6rem 0;
   /* backdrop-filter: blur(8px); */
 }
 
@@ -404,14 +390,12 @@ section {
   border: none;
   border-radius: 0.2rem;
   text-transform: none;
-
 }
 
-
 input:focus {
-    outline: none;
-    border: 2px solid #3498db; /* Cambia el color del borde real */
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Añade un brillo suave */
+  outline: none;
+  border: 2px solid #3498db; /* Cambia el color del borde real */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Añade un brillo suave */
 }
 
 .newsletter form input {
@@ -428,44 +412,8 @@ input:focus {
   gap: 1rem;
   padding-bottom: 1rem;
 }
-.containerFooter .containerIcons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
 
-.containerFooter i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.containerFooter .btnredeswa {
-  background-color: var(--wa);
-  box-shadow: 0px 1px 10px 1px var(--wa);
-}
-
-.containerFooter .btnredesfa {
-  background-color: var(--fa);
-  box-shadow: 0px 1px 10px 1px var(--fa);
-}
-
-.containerFooter .btnredesins {
-  background-color: var(--ins);
-  box-shadow: 0px 1px 10px 1px var(--ins);
-}
-.containerFooter .btnredestik {
-  background-color: var(--tik);
-  box-shadow: 0px 1px 10px 1px var(--tik);
-}
-
-.containerFooter .versionfooter{
+.containerFooter .versionfooter {
   display: flex;
   justify-content: center;
   align-items: center;
