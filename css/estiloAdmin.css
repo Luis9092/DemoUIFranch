@@ -1,0 +1,472 @@
+.datatable-container {
+  position: relative;
+  background-image: linear-gradient(
+    315deg,
+    var(--primary-color) 0%,
+    var(--container-color) 75%
+  );
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0 0 0;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--text-color);
+
+  box-shadow: var(--shadow-light);
+}
+
+.datatable-container .header-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.material-icons {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.datatable-container .header-tools .search {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#icon-search {
+  font-size: 21px;
+  padding: 5px 6px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--container-color);
+}
+.datatable-container .header-tools .search .search-input {
+  display: flex;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  background-color: var(--container-color);
+  display: block;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
+  color: var(--text-color);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.datatable-container .header-tools .search input:active,
+.datatable-container .header-tools .search input:focus,
+.datatable-container .header-tools .search input:hover {
+  outline: 1px solid var(--hover-colort);
+  box-shadow: 0 0 5px var(--hover-colort);
+}
+
+.datatable-container .header-tools .tools {
+  width: 20%;
+}
+
+.datatable-container .header-tools .tools ul {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+}
+
+.datatable-container .header-tools .tools ul li {
+  display: inline-block;
+  margin: 0 6px;
+  align-items: baseline;
+}
+
+.datatable-container .footer-tools {
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.datatable-container .footer-tools .list-items {
+  width: 50%;
+}
+
+.datatable-container .footer-tools .pages {
+  margin-left: auto;
+  margin-right: 0;
+  width: 50%;
+}
+
+.datatable-container .footer-tools .pages ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.datatable-container .footer-tools .pages ul li {
+  display: inline-block;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .header-tools .tools ul li button {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  background: var(--primary-color);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  color: var(--container-color);
+  box-shadow: var(--shadow-light);
+}
+
+#error-row {
+  margin: 0 4px;
+  display: none;
+  font-weight: 600;
+  color: var(--container-color);
+}
+
+.datatable-container .footer-tools .pages ul li span.active {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .footer-tools .pages ul li span,
+.datatable-container .header-tools .tools ul li button {
+  padding: 5px 8px;
+}
+
+.datatable-container .datatable {
+  border-collapse: collapse;
+}
+
+.table-section {
+  height: 300px;
+  overflow: auto;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.datatable-container .table-section table {
+  width: 100%;
+  min-width: 900px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  /* overflow: hidden; */
+}
+
+.datatable-container .datatable,
+.datatable-container .datatable th,
+.datatable-container .datatable td {
+  padding: 5px 5px;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+
+.datatable-container .datatable th {
+  font-weight: bolder;
+  text-align: left;
+  position: sticky;
+}
+
+.datatable-container .datatable thead {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.datatable-container .datatable thead tr th {
+  border: 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  position: sticky;
+  font-size: 13px;
+}
+
+.datatable-container .datatable td {
+  /* border: 1px solid var(--text-color); */
+  max-width: 200px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+thead th:nth-child(1) {
+  width: 25px;
+}
+thead th:nth-child(2) {
+  width: 25px;
+}
+
+.datatable-container .datatable tbody tr:nth-child(even) {
+  background: linear-gradient(
+    100deg,
+    var(--primary-color) 10%,
+    var(--container-color) 60%
+  );
+}
+
+.datatable-container .datatable tbody tr:hover {
+  background-color: var(--hover-row-colort);
+}
+
+.n-entries {
+  background: var(--container-color);
+  border: 1px solid var(--container-color);
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 3px;
+}
+
+.n-entries:active,
+.n-entries:focus,
+.n-entries:hover {
+  outline: 1px solid var(--hover-colort);
+  box-shadow: 0 0 5px var(--hover-colort);
+}
+
+.container-prueba {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-prueba input:focus-visible {
+  border: 1px solid #1aa7fe;
+  box-shadow: 0 1px 0 #1aa7fe;
+}
+
+/* modal Productos */
+
+#modalProducto {
+  background-color: transparent;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100% !important;
+  margin: 0;
+  padding: 10px;
+
+ 
+}
+
+#modalProducto .container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#modalProducto .contenedorModal {
+  width: 60% ;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--container-color);
+  overflow: hidden;
+  padding: 2.4rem 1rem;
+
+  border-radius: 5px;
+  box-shadow: var(--shadow-light);
+  margin: 4rem 0;
+}
+#modalProducto .contenedorModal .head {
+  margin-bottom: 1.4rem;
+}
+#modalProducto .contenedorModal .inputs {
+  /* position: relative; */
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: var(--shadow-light);
+  gap: 1rem;
+  margin: 0.6rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+#modalProducto .contenedorModal .inputs label {
+  width: 40%;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+
+#modalProducto .contenedorModal .inputs select,
+#modalProducto .contenedorModal .inputs textarea,
+#modalProducto .contenedorModal .inputs input {
+  width: 40%;
+  background-color: var(--container-color);
+  border: 1px solid var(--text-color);
+  padding: 4px 6px;
+  border-radius: 2px;
+}
+
+#modalProducto .btnSalir {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#modalProducto .btnSalir i {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+/* INPUT FILE */
+
+input[type="file"] {
+  border: none !important;
+  width: 100%;
+  font-size: 11px !important;
+}
+
+input[type="file"]::file-selector-button {
+  background-image: linear-gradient(
+    120deg,
+    var(--primary-color) 0%,
+    var(--container-color) 18%,
+    var(--primary-color) 100%
+  );
+  padding: 10px 10px;
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--text-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* BOTONES DIALOG */
+
+
+
+#modalProducto .contenedorModal   button {
+    height: 45px;
+    background: linear-gradient(90deg, #6dffbb 0%, #00ff88 46%, #97ffcf 100%);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 4px solid #00ca6c;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    font-size: 14px;
+    text-align: left;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    text-align: center;
+    margin: 18px 30px;
+    color: var(--text-color);
+    padding: 5px 35px;
+}
+
+
+#modalProducto .contenedorModal   button::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 25px solid #02b662;
+    border-bottom: 20px solid #02b662;
+    border-left: 30px solid transparent;
+    border-right: 40px solid #02b662;
+    position: absolute;
+    opacity: 0.6;
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+@media (max-width: 710px) {
+  #modalProducto .contenedorModal{
+    width:  100% !important;
+  }
+  .datatable-container .header-tools .tools ul li button {
+    width: 32px;
+    margin: 0;
+  }
+  .datatable-container .header-tools .tools ul li {
+    margin: 3px;
+  }
+
+  #icon-search {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #modalProducto .contenedorModal{
+    width: 100% !important;
+  }
+  .datatable-container .header-tools .tools ul {
+    margin: 0;
+    padding: 0;
+    font-size: 2px !important;
+  }
+
+  .datatable-container .header-tools .tools ul li button {
+    width: 25px;
+    padding: 6px;
+    font-size: 6px;
+  }
+  .material-icons {
+    font-size: 11px;
+  }
+  .datatable-container .datatable thead tr th,
+  .datatable-container .datatable td {
+    font-size: 10px;
+  }
+  .datatable-container .header-tools {
+    padding: 0;
+    margin-bottom: 8px;
+  }
+  .datatable-container .footer-tools .pages ul li button {
+    font-size: 10px;
+  }
+
+  .datatable-container .header-tools .search .search-input {
+    border-radius: 4px;
+  }
+}
+
+/* CAMBIOS 1  */

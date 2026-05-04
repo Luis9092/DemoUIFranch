@@ -4,24 +4,24 @@
 class FormUtils {
     static validateEmail(value) {
         if (!value) {
-            return { isValid: false, message: 'Email address is required' };
+            return { isValid: false, message: 'Correo necesario' };
         }
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(value)) {
-            return { isValid: false, message: 'Please enter a valid email address' };
+            return { isValid: false, message: 'Ingresar un correo valido' };
         }
         return { isValid: true };
     }
     
     static validatePassword(value) {
         if (!value) {
-            return { isValid: false, message: 'Password is required' };
+            return { isValid: false, message: 'Contraseña necesaria' };
         }
         if (value.length < 8) {
-            return { isValid: false, message: 'Password must be at least 8 characters long' };
+            return { isValid: false, message: 'La contraseña tiene que tener mas de 8 caracteres' };
         }
         if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(value)) {
-            return { isValid: false, message: 'Password must contain uppercase, lowercase, and number' };
+            return { isValid: false, message: 'La contraseña debe de llevar letras y numeros' };
         }
         return { isValid: true };
     }
