@@ -1,3 +1,6 @@
+/* body{
+background-color: var(--container-color);
+} */
 .datatable-container {
   position: relative;
   background-image: linear-gradient(
@@ -12,7 +15,7 @@
   padding: 10px;
   color: var(--text-color);
 
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--box-shadow);
 }
 
 .datatable-container .header-tools {
@@ -130,7 +133,7 @@
   font-weight: bold;
   padding: 10px;
   color: var(--container-color);
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--box-shadow);
 }
 
 #error-row {
@@ -160,7 +163,7 @@
 .table-section {
   height: 300px;
   overflow: auto;
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--box-shadow);
   margin-bottom: 1rem;
   border-radius: 10px;
 }
@@ -294,11 +297,12 @@ thead th:nth-child(2) {
   padding: 2.4rem 1rem;
 
   border-radius: 5px;
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--box-shadow);
   margin: 4rem 0;
 }
 #modalProducto .contenedorModal .head {
   margin-bottom: 1.4rem;
+  color: var(--text-color);
 }
 #modalProducto .contenedorModal .inputs {
   /* position: relative; */
@@ -308,7 +312,8 @@ thead th:nth-child(2) {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
   gap: 1rem;
   margin: 0.6rem;
   padding: 1rem;
@@ -329,6 +334,7 @@ thead th:nth-child(2) {
   border: 1px solid var(--text-color);
   padding: 4px 6px;
   border-radius: 2px;
+  color: var(--text-color);
 }
 
 #modalProducto .btnSalir {
@@ -468,5 +474,4 @@ input[type="file"]::file-selector-button:hover {
     border-radius: 4px;
   }
 }
-
-/* CAMBIOS 1  */
+ 

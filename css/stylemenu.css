@@ -1,23 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:
-    "Segoe UI" "Segoe UI",
-    Tahoma,
-    Geneva,
-    Verdana,
-    sans-serif;
+
+
+body {
+  background: var(--container-color2);
+ 
 }
-
-
-
-/* body {
-  background: linear-gradient(135deg, #0c0f17 0%, #151925 100%);
-  color: #e6e9f0;
-  min-height: 100vh;
-  overflow-x: hidden;
-} */
 
 header {
   position: fixed;
@@ -51,7 +37,11 @@ header {
 }
 
 .logo-text {
-  background: linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 0%,
+    var(--primary-color) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -62,6 +52,8 @@ nav ul {
   gap: 30px;
 }
 
+
+
 nav a {
   color: var(--text-color);
   text-decoration: none;
@@ -69,9 +61,10 @@ nav a {
   transition: color 0.3s ease;
   position: relative;
   padding: 5px 0;
+
 }
 nav a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 nav a::after {
   content: "";
@@ -81,8 +74,63 @@ nav a::after {
   width: 0;
   height: 2px;
   background: var(--primary-color);
-  transition: width 0.3s ease;
+  transition: width 0.6s ease;
 }
+
+#btnSalir {
+ color: var(--primary-color);
+}
+
+/* ESTILO SWITCH TEME DARK/LIGHT */
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: inset 0 1px 2px var(--secon-bg-color),
+    0 1px 2px var(--secon-bg-color);
+  border: 1px solid var(--light-color);
+}
+
+.toggle-switch.active {
+  background: linear-gradient(
+    to right,
+    var(--container-color),
+    var(--container-color)
+  );
+}
+
+.toggle-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--text-color);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch.active .toggle-handle {
+  transform: translateX(26px);
+  background-color: var(--primary-color);
+}
+
+/* FINALIZA CODIGO SWITCH THEME */
 
 nav a:hover::after {
   width: 100%;
@@ -94,17 +142,21 @@ nav a:hover::after {
   color: var(--text-color);
   cursor: pointer;
 }
+
+
 .hero {
-  max-width: 1200px;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 80px;
+  gap: 10px;
   padding: 120px 40px 60px;
   min-height: 100vh;
+  background-color: var(--container-color2) !important;
+
 }
 
 .content {
@@ -117,11 +169,15 @@ nav a:hover::after {
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 15px;
-  background: linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 20%,
+    var(--primary-color) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-  text-shadow: 0 5px 15px var(--primary-color);
+  text-shadow: 0 2px 25px var(--primary-color);
 }
 
 p {
@@ -170,8 +226,12 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-color) 100%);
-  color:var(--text-color);
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--primary-color) 100%
+  );
+  color: var(--text-color);
   box-shadow: 0 5px 15px var(--primary-color);
 }
 
@@ -206,8 +266,9 @@ p {
 }
 
 .btn-secondary:hover {
-  background-color: rgba(42, 252, 133, 0.1);
+  /* background-color:var(--primary-color); */
   transform: translateY(-3px);
+  font-weight: 700;
 }
 
 .social-icons {
@@ -226,7 +287,11 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, var(--container-color) 0%, var(--container-color) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--container-color) 0%,
+    var(--container-color) 100%
+  );
   color: var(--primary-color);
   font-size: 1.3rem;
   transition: all 0.3s ease;
@@ -248,7 +313,11 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, var(--primary-color), var(--primary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--primary-color)
+  );
   opacity: 0;
   transition: 0.3s;
   z-index: -1;
@@ -279,6 +348,7 @@ p {
 }
 
 .profile-img:hover {
+  cursor: pointer;
   transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -292,7 +362,12 @@ p {
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
   border-radius: 50%;
-  background: conic-gradient(transparent, var(--primary-color), transparent, transparent);
+  background: conic-gradient(
+    transparent,
+    var(--primary-color),
+    transparent,
+    transparent
+  );
   z-index: 1;
   animation: rotate 4s linear infinite;
 }
@@ -305,7 +380,12 @@ p {
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
   border-radius: 50%;
-  background: conic-gradient(transparent, var(--primary-color), transparent, transparent);
+  background: conic-gradient(
+    transparent,
+    var(--primary-color),
+    transparent,
+    transparent
+  );
 
   z-index: 2;
   animation: rotate-reverse 2s linear infinite;
@@ -319,7 +399,12 @@ p {
   top: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
   border-radius: 50%;
-  background: conic-gradient(transparent, var(--primary-color), transparent, transparent);
+  background: conic-gradient(
+    transparent,
+    var(--primary-color),
+    transparent,
+    transparent
+  );
   z-index: 3;
   animation: rotate 2s linear infinite;
 }
@@ -361,13 +446,20 @@ p {
   position: absolute;
   width: 260px;
   height: 260px;
-  background: linear-gradient(135deg, var(--text-color) 0%, var(--text-color) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--text-color) 0%,
+    var(--text-color) 100%
+  );
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
 }
+
+
+
 
 @keyframes rotate {
   0% {
@@ -454,11 +546,12 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* padding-top: 50px; */
     transition: left 0.3s ease;
   }
 
   nav ul.activo {
+    border-top: 1px solid var(--primary-color);
+    padding-top: 2rem;
     left: 0;
   }
 

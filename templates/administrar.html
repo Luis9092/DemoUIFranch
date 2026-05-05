@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="/lib/jquery.dataTables.min.css" />
     l
     <script src="/lib/jquery.dataTables.min.js"></script>
+
+    <!-- lib color change -->
+    <link rel="stylesheet" href="../lib/spectrum.css" />
+    <script src="../lib/spectrum.js"></script>
   </head>
   <body>
     <header>
@@ -33,9 +37,24 @@
           <li><a href="../index.html">Login</a></li>
           <li><a href="home.html">Home</a></li>
           <li><a href="administrar.html">Admin</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">skilss</a></li>
-          <li><a href="#">Contactos</a></li>
+          <li><a href="#">Sandalias</a></li>
+          <li><a href="#">Tenis</a></li>
+          <li>
+            <a id="btnSalir" href="#"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i> Salir</a
+            >
+          </li>
+          <li>
+            <div class="toggle-container">
+              <div id="toggle-switch" class="toggle-switch">
+                <!-- <div class="toggle-icons">
+                  <span><i class="fa-solid fa-sun"></i></span>
+                  <span><i class="fa-solid fa-moon"></i></span>
+                </div> -->
+                <div class="toggle-handle"></div>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -290,8 +309,7 @@
               <td>ajoch.com</td>
               <td>+5099182</td>
               <td>Masculino</td>
-              <td>99</td>
-              <td>asdasd Perez</td>
+
               <td>12/12/2012</td>
             </tr>
             <tr>
@@ -371,7 +389,7 @@
           </div>
 
           <div class="botonesgroup">
-            <button id="btnAgregar" name="btnAgregar" >Agregar Producto</button>
+            <button id="btnAgregar" name="btnAgregar">Agregar Producto</button>
           </div>
         </div>
       </div>

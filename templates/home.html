@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+
+    <script src="../lib/jQuery3.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
@@ -19,6 +21,11 @@
     />
 
     <link rel="stylesheet" href="../css/stylemenu.css" />
+
+    <!-- lib color change -->
+    <link rel="stylesheet" href="../lib/spectrum.css" />
+    <script src="../lib/spectrum.js"></script>
+ 
   </head>
   <body>
     <header>
@@ -36,9 +43,20 @@
           <li><a href="../index.html">Login</a></li>
           <li><a href="home.html">Home</a></li>
           <li><a href="administrar.html">Admin</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">skilss</a></li>
-          <li><a href="#">Contactos</a></li>
+          <li><a href="#">Sadalias</a></li>
+          <li><a href="#">Tenis</a></li>
+          <li id="btnSali"><a href="#">Salir</a></li>
+          <li>
+            <div class="toggle-container">
+              <div id="toggle-switch" class="toggle-switch">
+                <!-- <div class="toggle-icons">
+                  <span><i class="fa-solid fa-sun"></i></span>
+                  <span><i class="fa-solid fa-moon"></i></span>
+                </div> -->
+                <div class="toggle-handle"></div>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -57,9 +75,9 @@
           <a href="#productos" class="btn btn-primary">
             <i class="fa-solid fa-qrcode"></i> Ver Productos
           </a>
-          <a href="#contact" class="btn btn-secondary">
-            <i class="fa-solid fa-person-circle-plus"></i>
-            Contactos
+          <a href="#" id="btnColor" class="btn btn-secondary">
+            <i class="fa-solid fa-brush"></i>
+            Modificar Color
           </a>
         </div>
 
@@ -210,7 +228,7 @@
 
       <!-- SANDALIAS -->
 
-      <section class="tenisProductos" id="tenisProductos">
+      <section class="sandaliasProductos" id="sandaliasProductos">
         <h1 class="heading"><span>Sandalias</span></h1>
 
         <div class="swiper card-slider">

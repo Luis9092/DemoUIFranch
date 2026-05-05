@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
 :root {
-  --principal: #3d0000;
-  --dark-color: #ff0000;
   --text-color: #000000;
   --light-color: #666;
   --border: 0.1rem solid rgba(0, 0, 0, 0.5);
   --border-hover: 0.1rem solid var(--text-color);
   --border-color: #d2d2d2;
-  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   --primary-color: #b10026;
   --icon-color: #00ffb7;
   --error-color: #f31448;
   --container-color: #f5fbff;
-  --container-color1: white;
+  --container-color2: rgb(241, 241, 241);
   --fa: #001aff;
   --ins: #cb00dd;
   --tik: #000000;
@@ -21,15 +21,27 @@
   --neon-box-shadow: 0 1.8px 0.6rem var(--primary-color);
 
   /* table */
-  --text-colort: #000000;
-  --primary-colort: #f5f7f5;
-  --secondary-colort: #de84cb;
+
   --input-colort: #ffffff;
   --hover-colort: rgb(4, 116, 244);
   --hover-row-colort: #e5fcff;
   --row-color2: #38f9d7;
 
-  --shadow-light:
+
+}
+
+[data-theme="dark"] {
+  --container-color: rgb(27, 27, 27);
+  --container-color2: rgb(40, 41, 43);
+
+  --text-color: #ffffff;
+  --gray-color: #fffafa;
+  --secon-bg-color: #000000e3;
+  --boxshadow-color: #000000;
+  --text-shadow: 1px 0px 2px rgb(0, 0, 0);
+  --input-borderColor: #5b5b5b;
+  --light-color: #a8a8a8;
+  --box-shadow:
     rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
